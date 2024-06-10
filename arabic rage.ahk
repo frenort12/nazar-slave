@@ -17,9 +17,6 @@ Numpad1::
     SendMessages:
     SetKeyDelay, 0, 0
     Random, randIndex, 1, % WordsArray.MaxIndex()
-
-    MsgBox % "Random line: " randomLine
-
     msg := WordsArray[randIndex]
 
     Send, %msg%{Enter}
