@@ -18,7 +18,7 @@ Numpad1::
     SetKeyDelay, 0, 0
     Random, randIndex, 1, % WordsArray.MaxIndex()
     fileName := "./arabicDatabase.txt"
-    FileRead, fileContent, % fileName
+    FileRead, fileContent, % fileName, UTF-8
     StringSplit, lines, fileContent, `n
     linesCount := lines0
     Random, randLine, 1, % linesCount
