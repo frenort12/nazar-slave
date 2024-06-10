@@ -29,19 +29,3 @@ Numpad1::
     msg := WordsArray[randIndex]
 
     Send, %msg%{Enter}
-
-Numpad2::
-    isRunning := !isRunning
-    if (isRunning) {
-        SetTimer, SendMessages, 100
-    } else {
-        SetTimer, SendMessages, Off
-    }
-    Return
-
-    SendMessages:
-    SetKeyDelay, 0, 0
-    Random, randIndex, 1, % WordsArray2.MaxIndex()
-    msg := WordsArray2[randIndex]
-
-    Send, %msg%{Enter} 
