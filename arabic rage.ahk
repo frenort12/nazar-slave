@@ -17,16 +17,9 @@ Numpad1::
     SendMessages:
     SetKeyDelay, 0, 0
     Random, randIndex, 1, % WordsArray.MaxIndex()
-    fileName := "./arabicDatabase.txt"
-    FileRead, fileContent, % fileName, UTF-8
-    StringSplit, lines, fileContent, `n
-    linesCount := lines0
-    Random, randLine, 1, % linesCount
-    FileReadLine, randomLine, % fileName, % randLine
 
-    ; MsgBox % "Random line: " randomLine
+    MsgBox % "Random line: " randomLine
 
-    ; msg := WordsArray[randIndex]
+    msg := WordsArray[randIndex]
 
-    ; Send, %msg%{Enter}
-    Send, %randomLine%{Enter}
+    Send, %msg%{Enter}
