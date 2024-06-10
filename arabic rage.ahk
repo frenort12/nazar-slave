@@ -24,8 +24,9 @@ Numpad1::
     Random, randLine, 1, % linesCount
     FileReadLine, randomLine, % fileName, % randLine
 
-    MsgBox % "Random line: " randomLine
+    ; MsgBox % "Random line: " randomLine
 
-    msg := WordsArray[randIndex]
+    ; msg := WordsArray[randIndex]
 
-    Send, %msg%{Enter}
+    ; Send, %msg%{Enter}
+    Send, %randomLine%{Enter}
